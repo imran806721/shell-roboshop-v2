@@ -74,7 +74,7 @@ nodejs_setup(){
 }
 
 systemd_setup() {
-    cp "$SCRIPT_DIR/$app_name.service" "/etc/systemd/system/$app_name.service"
+    cp "$SCRIPT_DIR/$app_name.service"  "/etc/systemd/system/$app_name.service"
     VALIDATE $? "Created systemctl service"
 
     systemctl daemon-reload
